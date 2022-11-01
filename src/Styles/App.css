@@ -1,0 +1,184 @@
+
+
+body {
+  align-items: center;
+  background: #2ecc71;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  display: inline-block;
+
+  margin: 1rem;
+  left: 30%;
+  position: relative;
+  margin: 1rem;
+  width: 566px;
+  height: 700px;
+}
+
+.card-1 {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.card-1:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+#heading {
+  position: relative;
+  text-align: center;
+}
+.input-div {
+  position: absolute;
+  top: 90px;
+  left: 190px;
+  text-align: center;
+}
+#input {
+  text-align: center;
+  width: 200px;
+  padding: 10px;
+}
+
+button,
+button::after {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.glow-on-hover {
+  width: 100px;
+  height: 42px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: rgb(64, 71, 64);
+  cursor: pointer;
+
+  z-index: 0;
+  border-radius: 10px;
+  margin-top: 53px;
+  margin-left: 30px;
+}
+.glow-on-hover:hover{
+  background-color: #12cf18;
+}
+
+.glow-on-hover:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #000;
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .card {
+    background: #fff;
+    border-radius: 10px;
+    display: inline-block;
+
+    left: 30%;
+    position: relative;
+
+    width: 400px;
+    height: 500px;
+    margin-left: -45px;
+  }
+
+  .input-div {
+    /* border: 1px solid black; */
+    position: absolute;
+    top: 90px;
+    left: 90px;
+    text-align: center;
+  }
+}
+
+ul{
+list-style: none;
+}
+.list-items{
+  color: black;
+  font-size: 30px;
+}
+
+.delete-btn{
+  position: relative;
+  bottom: 6px;
+  width: 60px;
+  height: 30px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: gray;
+  cursor: pointer;
+
+  z-index: 0;
+  border-radius: 10px;
+
+}
+.delete-btn:hover{
+  background-color: red;
+}
